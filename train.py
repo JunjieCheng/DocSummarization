@@ -105,9 +105,9 @@ def train(model, data_loader, criterion, optim, start, epoch):
 
 
 def main():
-    fileDataSet = dataset.FileDataSet('../Data/train_set/abstracts.txt', '../Data/train_set/articles.txt')
+    fileDataSet = dataset.FileDataSet('./Data/train_set/abstracts.txt', './Data/train_set/articles.txt')
 
-    vocab = preprocess.import_vocab('../Data/dictionary.txt')
+    vocab = preprocess.import_vocab('./Data/dictionary.txt')
     vocab_size = len(vocab.idx2word)
 
     model = build_model(vocab_size, vocab)
